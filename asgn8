@@ -1,0 +1,93 @@
+Problem Statement: Product–Category Management System with Django ORM and MySQL 
+
+Background 
+
+You are required to build a Product–Category Management System using Django. The backend database must be MySQL, and all database operations must use Django ORM. This project simulates a real-world e-commerce case where products are grouped under categories. 
+
+Requirements 
+
+1. Environment Setup 
+
+Use Django in a virtual environment. 
+
+Configure MySQL in settings.py. 
+
+Use makemigrations and migrate to manage schema changes. 
+
+2. Models (minimum required) 
+
+Category 
+
+name (CharField, max_length=100, unique=True) 
+
+description (TextField, null=True, blank=True) 
+
+Product 
+
+name (CharField, max_length=200) 
+
+price (DecimalField, max_digits=10, decimal_places=2) 
+
+stock (IntegerField) 
+
+created_at (DateTimeField, auto_now_add=True) 
+
+category (ForeignKey → Category, on_delete=CASCADE) 
+
+Order (optional but good for practice) 
+
+product (ForeignKey → Product, on_delete=CASCADE) 
+
+quantity (IntegerField) 
+
+order_date (DateTimeField, auto_now_add=True) 
+
+3. Functional Requirements 
+
+Add categories and products through Django Admin. 
+
+Write ORM queries to: 
+
+List all products in a given category. 
+
+Find all categories that have at least one product. 
+
+Calculate the total stock value for each category (SUM(price * stock)). 
+
+Retrieve the top 5 most expensive products. 
+
+Build a simple template + view that displays all products with their category names. 
+
+4. Error Handling 
+
+Ensure product names are unique within the same category. 
+
+Prevent stock values from being negative. 
+
+5. Deliverables 
+
+Django project folder with models, migrations, and ORM queries. 
+
+A README.md that explains: 
+
+How to set up the environment. 
+
+How to configure MySQL. 
+
+How to run and test the app. 
+
+6. Evaluation Rubrics 
+
+ Correct setup of Django with MySQL. 
+
+ Models created with correct fields and relationships (Category ↔ Product). 
+
+ ORM queries implemented (no raw SQL). 
+
+ Functional features (listing, category grouping, stock checks). 
+
+ Code quality and structure. 
+
+ Working Django Admin. 
+
+ 
